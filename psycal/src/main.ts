@@ -64,4 +64,202 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 </body>
 `
 
+let output = document.getElementById('fname') as HTMLInputElement
 
+let sinButton = document.getElementById('sin')
+let cosButton = document.getElementById('cos')
+let tanButton = document.getElementById('tan')
+let arcsinButton = document.getElementById('arcsin')
+let arccosButton = document.getElementById('arccos')
+let arctanButton = document.getElementById('arctan')
+let logButton = document.getElementById('log')
+let lnButton = document.getElementById('ln')
+let squarerootButton = document.getElementById('squareroot')
+let exponentButton = document.getElementById('exponent')
+let parenthesisLeftButton = document.getElementById('parenthesisLeft')
+let parenthesisRightButton = document.getElementById('parenthesisRight')
+let clearButton = document.getElementById('clear')
+let sevenButton = document.getElementById('seven')
+let eightButton = document.getElementById('eight')
+let nineButton = document.getElementById('nine')
+let divideButton = document.getElementById('divide')
+let fourButton = document.getElementById('four')
+let fiveButton = document.getElementById('five')
+let sixButton = document.getElementById('six')
+let multiplyButton = document.getElementById('multiply')
+let oneButton = document.getElementById('one')
+let twoButton = document.getElementById('two')
+let threeButton = document.getElementById('three')
+let subtractButton = document.getElementById('subtract')
+let zeroButton = document.getElementById('zero')
+let decimalButton = document.getElementById('decimal')
+let equalsButton = document.getElementById('equals')
+let addButton = document.getElementById('add')
+
+if (sinButton) {
+  sinButton.addEventListener('click', () => {
+    output.value += 'sin('
+  })
+}
+
+if (cosButton) {
+  cosButton.addEventListener('click', () => {
+    output.value += 'cos('
+  })
+}
+
+if (tanButton) {
+  tanButton.addEventListener('click', () => {
+    output.value += 'tan('
+  })
+}
+
+if (arcsinButton) {
+  arcsinButton.addEventListener('click', () => {
+    output.value += 'arcsin('
+  })
+}
+
+if (arccosButton) {
+  arccosButton.addEventListener('click', () => {
+    output.value += 'arccos('
+  })
+}
+
+if (arctanButton) {
+  arctanButton.addEventListener('click', () => {
+    output.value += 'arctan('
+  })
+}
+
+if (logButton) {
+  logButton.addEventListener('click', () => {
+    output.value += 'log('
+  })
+}
+
+if (lnButton) {
+  lnButton.addEventListener('click', () => {
+    output.value += 'ln('
+  })
+}
+
+if (squarerootButton) {
+  squarerootButton.addEventListener('click', () => {
+    output.value += '√('
+  })
+}
+
+if (exponentButton) {
+  exponentButton.addEventListener('click', () => {
+    output.value += '^'
+  })
+}
+
+if (parenthesisLeftButton) {
+  parenthesisLeftButton.addEventListener('click', () => {
+    output.value += '('
+  })
+}
+
+if (parenthesisRightButton) {
+  parenthesisRightButton.addEventListener('click', () => {
+    output.value += ')'
+  })
+}
+
+if (clearButton) {
+  clearButton.addEventListener('click', () => {
+    output.value = ''
+  })
+}
+
+if (sevenButton) {
+  sevenButton.addEventListener('click', () => {
+    output.value += '7'
+  })
+}
+
+if (eightButton) {
+  eightButton.addEventListener('click', () => {
+    output.value += '8'
+  })
+}
+
+if (nineButton) {
+  nineButton.addEventListener('click', () => {
+    output.value += '9'
+  })
+}
+
+if (divideButton) {
+  divideButton.addEventListener('click', () => {
+    output.value += '/'
+  })
+}
+
+if (fourButton) {
+  fourButton.addEventListener('click', () => {
+    output.value += '4'
+  })
+}
+
+if (fiveButton) {
+  fiveButton.addEventListener('click', () => {
+    output.value += '5'
+  })
+}
+
+if (sixButton) {
+  sixButton.addEventListener('click', () => {
+    output.value += '6'
+  })
+}
+
+if (multiplyButton) {
+  multiplyButton.addEventListener('click', () => {
+    output.value += '*'
+  })
+}
+
+if (oneButton) {
+  oneButton.addEventListener('click', () => {
+    output.value += '1'
+  })
+}
+
+if (twoButton) {
+  twoButton.addEventListener('click', () => {
+    output.value += '2'
+  })
+}
+
+if (threeButton) {
+  threeButton.addEventListener('click', () => {
+    output.value += '3'
+  })
+}
+
+if (subtractButton) {
+  subtractButton.addEventListener('click', () => {
+    output.value += '-'
+  })
+}
+
+if (zeroButton) {
+  zeroButton.addEventListener('click', () => {
+    output.value += '0'
+  })
+}
+
+if (decimalButton) {
+  decimalButton.addEventListener('click', () => {
+    output.value += '.'
+  })
+}
+
+if (addButton) {
+  addButton.addEventListener('click', () => {
+    output.value += '+'
+  })
+}
