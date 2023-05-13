@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@psse-cpu/tokenizer": "^0.1.1"
+  }
+}

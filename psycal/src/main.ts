@@ -1,3 +1,4 @@
+import ScientificCalculator from './components/sci-cal'
 import './style.css'
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
@@ -95,6 +96,7 @@ let zeroButton = document.getElementById('zero')
 let decimalButton = document.getElementById('decimal')
 let equalsButton = document.getElementById('equals')
 let addButton = document.getElementById('add')
+let solver = new ScientificCalculator()
 
 if (sinButton) {
   sinButton.addEventListener('click', () => {
@@ -262,4 +264,10 @@ if (addButton) {
   addButton.addEventListener('click', () => {
     output.value += '+'
   })
+}
+
+if(equalsButton){
+   equalsButton.addEventListener('click', () => {
+      output.value = String (solver.evaluateExpression(output.value))
+   })
 }
