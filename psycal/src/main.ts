@@ -1,15 +1,18 @@
 import ScientificCalculator from './components/sci-cal'
 import './style.css'
+import Stack from './components/Stack'
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
+
 <body class="body">
+<p id="history"/>
 <br><br><br><br>
 <center>
  <div class="div"> 
    <br><br>
    <table class = "table">
       <tr>
-         <input class = "form" type="text" id="fname" size="42"  placeholder="0">
+         <input class="form" type="text" readonly id="fname" size="42"  placeholder="0">
       </tr>
      <tr>
         <td><button class = "button1" id="sin(" type="button">sin</button> </td>
@@ -67,6 +70,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 
 let output = document.getElementById('fname') as HTMLInputElement
 let solver = new ScientificCalculator
+let historyStack = new Stack
 let buttons = document.querySelectorAll('.button2, .button1, .button3')
 
 if (buttons) {
@@ -105,6 +109,12 @@ function buttonClick(event: any) {
       break
     case '=':
       output.value = `${solver.evaluateExpression(output.value)}`
+      historyStack.push(output.value)
+      let historyDiv = document.getElementById("history") as HTMLOutputElement
+      let outputText: string = ""
+
+      outputText = historyStack.displayContents()
+      historyDiv.innerHTML = outputText
       break
     default:
       output.value += buttonID
